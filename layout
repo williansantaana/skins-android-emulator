@@ -1,0 +1,42 @@
+parts {
+  device {
+    display {
+      width 1080
+      height 2340
+      x 0
+      y 0
+    }
+  }
+  portrait {
+    background {
+      image port_back.svg
+    }
+    foreground {
+      mask round_corners.svg
+    }
+    onion {
+      image port_fore.webp
+    }
+  }
+}
+layouts {
+  portrait {
+    width 1148
+    height 2454
+    event EV_SW:0:1
+    part1 {
+      name portrait
+      x 0
+      y 0
+    }
+    part2 {
+      name device
+      x 28
+      y 43
+    }
+  }
+}
+network {
+    speed  full
+    delay  none
+}
